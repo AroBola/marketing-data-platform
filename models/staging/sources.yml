@@ -1,0 +1,16 @@
+
+version: 2
+
+sources:
+  - name: marketing
+    database: bronze_production
+    schema: marketing_dev
+    tables:
+      - name: facebook_ads_stats
+        identifier: ads_stats
+
+      - name: snapchat_ads_stats
+        identifier: snapchat_ads_stats
+
+      - name: facebook_accounts
+        identifier: new_account_de_randomized

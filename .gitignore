@@ -1,0 +1,14 @@
+
+target/
+dbt_packages/
+logs/
+.env
+# Local dbt credentials
+profiles.yml
+
+# Python virtual environment
+.venv/
+venv/
+
+# Local environment and secrets
+.env.*
