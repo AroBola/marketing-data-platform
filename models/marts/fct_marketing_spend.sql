@@ -7,7 +7,7 @@ WITH marketing_ads AS (
 )
 
 SELECT
-    platform,
+    LOWER(platform) AS platform,
     ad_detail_id,
     account_id,
     ad_currency_code,

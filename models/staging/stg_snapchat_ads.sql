@@ -9,3 +9,5 @@ SELECT
     TRY_CAST(ad_date AS date) AS ad_date,
     CAST(data_src AS string) AS data_src
 FROM {{ source('marketing', 'snapchat_ads_stats') }}
+WHERE ad_detail_id IS NOT NULL
+  AND ad_date IS NOT NULL

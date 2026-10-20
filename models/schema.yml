@@ -1,0 +1,40 @@
+
+version: 2
+
+models:
+  - name: stg_facebook_ads
+    description: "Cleans and standardizes raw Facebook advertising data."
+    columns:
+      - name: ad_id
+        description: "Identifier for the Facebook ad."
+        data_tests:
+          - not_null
+
+      - name: ad_date
+        description: "Date of the advertising performance record."
+        data_tests:
+          - not_null
+
+  - name: stg_snapchat_ads
+    description: "Cleans and standardizes raw Snapchat advertising data."
+    columns:
+      - name: ad_detail_id
+        description: "Identifier for the Snapchat advertising detail record."
+        data_tests:
+          - not_null
+
+      - name: ad_date
+        description: "Date of the advertising performance record."
+        data_tests:
+          - not_null
+
+  - name: fct_marketing_spend
+    description: "Unified analytical model for marketing spend and advertising performance."
+    columns:
+      - name: platform
+        description: "Advertising platform associated with the record."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['facebook', 'snapchat']
