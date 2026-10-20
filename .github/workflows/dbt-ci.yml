@@ -44,4 +44,4 @@ jobs:
 
       - name: Validate dbt project
         run: dbt parse --profiles-dir ~/.dbt
-        working-directory: marketing_data_platform
+        working-directory: .
